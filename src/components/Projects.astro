@@ -1,0 +1,45 @@
+---
+const PROJECTS = [
+    {
+        title: "Portfolio's Project",
+        description: "Working on my portfolio. Learning Astro and Tailwinds.",
+        link: "",
+        github: "https://github.com/NotPoncho23/portfolio",
+        image: "",
+        tags: [],
+    },
+    {
+        title: "Web Development Playita's Project",
+        description:
+            "Worked on full-stack development of website with the menu of Playita's Restaurant. Using HTML, CSS, JavaScript, PHP, MySQL and Bootstrap.",
+        link: "",
+        github: "https://github.com/NotPoncho23/ProyectoPlayita",
+        image: "",
+        tags: [],
+    },
+    {
+        title: "Web Development Cafeteria's Project",
+        description:
+            "Worked on Front-End development of website for optimize the orders of the cafeteria. Using HTML, CSS, JavaScript and PHP.",
+        link: "",
+        github: "https://github.com/NotPoncho23/ProyectoCafeteria",
+        image: "",
+        tags: [],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ date, title, description, link, github, image, tags }) => (
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+                {tags.map((tag) => (
+                    <li>{tags}</li>
+                ))}
+            </ul>
+            <img src={image} alt={`Project's ${image} screenshoot`} />
+        </article>
+    ))
+}
