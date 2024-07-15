@@ -5,7 +5,7 @@ const PROJECTS = [
         description: "Working on my portfolio. Learning Astro and Tailwinds.",
         link: "",
         github: "https://github.com/NotPoncho23/portfolio",
-        image: "/projects/portfolio.webp",
+        image: "/projects/playita.webp",
         tags: ["Astro", "TailwindsCSS", "JavaScript", "HTML"],
     },
     {
@@ -14,7 +14,7 @@ const PROJECTS = [
             "Worked on full-stack development of website with the menu of Playita's Restaurant. Using HTML, CSS, JavaScript, PHP, MySQL and Bootstrap.",
         link: "",
         github: "https://github.com/NotPoncho23/ProyectoPlayita",
-        image: "/projects/playita.webp",
+        image: "",
         tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Bootstrap"],
     },
     // {
@@ -31,17 +31,15 @@ const PROJECTS = [
 
 {
     PROJECTS.map(({ title, description, link, github, image, tags }) => (
-        <article class="m-4">
-            <a class="text-2xl font-semibold text-yellow-200 mb-2" href={github}>{title}</a>
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="mb-3">
+            <ul>
                 {tags.map((tag) => (
                     <li>{tag}</li>
                 ))}
             </ul>
-
             <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Project's ${image} screenshoot`} />
-            <br>
         </article>
     ))
 }
